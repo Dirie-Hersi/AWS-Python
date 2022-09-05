@@ -12,3 +12,7 @@ response = bucket.create(
    
 )
 
+print(resource)
+
+
+
