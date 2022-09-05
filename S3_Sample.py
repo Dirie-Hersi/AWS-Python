@@ -7,7 +7,7 @@ bucket=aws_resource.Bucket("my-first-bucket-dhersi-us1-2")
 response = bucket.create(
     ACL='public-read',
     CreateBucketConfiguration={
-        'LocationConstraint':'us-east-1'
+        'LocationConstraint':'us-east-2'
     },
    
 )
