@@ -1,7 +1,7 @@
 import boto3
 
 aws_resource=boto3.resource("s3")
-bucket=aws_resource.Bucket("my_first_bucket_dhersi_us1")
+bucket=aws_resource.Bucket("my-first-bucket-dhersi-us1")
 
 
 response = bucket.create(
