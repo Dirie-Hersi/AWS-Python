@@ -12,6 +12,18 @@ for bucket in resource.buckets.all():
 #Total number of buckets
 print(len(list(resource.buckets.all())))
 
-#Bucket creation info
+#Bucket  info
 s3_resource=boto3.client("s3")
 print(s3_resource.list_buckets()["Buckets"])
+
+print()
+
+#Info of individual bucket
+print(s3_resource.list_buckets()["Buckets"] [0]["CreationDate"])
+
+print()
+
+#In a loop
+for bucket in s3_resource.list_buckets()["Buckets"]:
+    print(bucket["Name"])
+    print(bucket["CreationDate"])
