@@ -15,8 +15,10 @@ print()
 #resource variable
 instances = ec2_client.instances.all()
 
+count = 1
 #loop to get ec2 data
 for instance in instances:
+    print(f"Instance #{count}")
     print(f'EC2 instance {instance.id}" information:')
     print(f'Instance state: {instance.state["Name"]}')
     print(f'Instance AMI: {instance.image.id}')
@@ -24,3 +26,4 @@ for instance in instances:
     print(f'Instance type: "{instance.instance_type}')
     print(f'Piblic IPv4 address: {instance.public_ip_address}')
     print('-'*60)
+    count+=1
