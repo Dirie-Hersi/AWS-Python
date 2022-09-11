@@ -36,5 +36,3 @@ table = my_dynamodb.create_table(
 
 #Printing table status
 print("Table Status:", table.table_status)
-
-#Add 10 items to the table
