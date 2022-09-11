@@ -37,20 +37,3 @@ table = my_dynamodb.create_table(
 #Printing table status
 print("Table Status:", table.table_status)
 
-#Connecting to DynamoDB
-dynamodb = boto3.resource(
-    'dynamodb',
-    aws_access_key_id='AKIAU27FDFMJCKHLBAH3',
-    aws_secret_access_key='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',
-    )
-    
-#Writing to DynamoDB
-
-with table.batch_writer() as batch:
-    batch.put_item(
-        Item={
-            'Destination': 'Auckland',
-            'Ranking': '1',
-           
-        }
-    )
