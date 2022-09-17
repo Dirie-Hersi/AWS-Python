@@ -1,8 +1,11 @@
 import boto3
+import json
 
-response = client.create_queue(
-    QueueName='Test',
+mysqs = boto3.client('sqs')
+
+response = mysqs.create_queue(
+    QueueName='My_Queue',
     
 )
 
-print(response)
+print(json.dumps(response, indent=2, default=str))
